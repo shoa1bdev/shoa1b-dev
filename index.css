@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@400;500;700&display=swap');
+:root {
+	--primary-color: #06D672;
+	--secondary-color: #2d2d2d;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'DM Sans', sans-serif;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.fa-brands:hover {
+	color: var(--primary-color);
+}
+body, html {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background: var(--secondary-color);
+	color: #fff;
+	padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    position: relative;
+}
+::-webkit-scrollbar {
+	width: 10px;
+	background: var(--secondary-color);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--primary-color);
+	border-radius: 8px;
+}
+#logo,
+.name {
+	font-family: 'Syne';
+	color: var(--primary-color);
+}
+.nav-bar {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.navlinks {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	gap: 50px;
+	transition: .20s ease;
+}
+.navlink {
+	height: 100%;
+}
+.home:hover a,
+.about:hover a,
+.projects:hover a {
+	border-bottom:2px solid var(--primary-color);
+	color: var(--primary-color);
+}
+.contact-btn {
+	padding: 8px 18px;
+	border: 2px solid var(--primary-color);
+	border-radius: 8px;
+}
+.contact-btn:hover {
+	background: var(--primary-color);
+	color: white;
+	transition: .20s ease;
+}
+#home {
+	width: 100%;
+	padding: 100px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.social {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.vector {
+	width: 50%;
+}
+.illustration {
+	width: 100%;
+	padding: 15px 0;
+}
+.intro-text {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 15px;
+	font-size: 1.5rem;
+}
+.btn {
+	width: 150px;
+	height: 40px;
+	border-radius: 8px;
+	background: var(--primary-color);
+	color: #fff;
+	border: none;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn:hover,
+.content > .btn:hover
+ {
+	background: transparent;
+	border: 2px solid var(--primary-color);
+	transition: .20s ease;
+}
+.content > .btn:hover {
+	border: 2px solid #fff;
+	color: #fff;
+}
+#about {
+	width: 100%;
+	display: flex;
+}
+#section-header {
+	text-align: center;
+	font-family: 'Syne';
+	padding: 20px 0;
+	margin: 80px 0;
+	font-size: 1.8rem;
+}
+#about {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 0;
+}
+.profile {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	padding: 5px;
+}
+.profile-container {
+	width: 35%;
+	border-radius: 50%;
+	display: flex;
+	border: 6px solid var(--primary-color);
+	align-items: center;
+	justify-content: center;
+}
+.about-me {
+	width: 50%;
+	font-size: 1.3rem;
+	line-height: 1.5;
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.icons {
+	font-size: 2.2rem;
+	display: flex;
+	gap: 20px;
+}
+#projects {
+	display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 20px; 
+    grid-template-areas: 
+    "one two three"
+    "four five six"
+    "seven eight nine"
+    ".      btn   ."; 
+}
+.project-container {
+	width: 100%;
+	min-height: 350px;
+	border-radius: 10px;
+	background:rgba(255,255,255,0.1);
+	backdrop-filter: blur(2px);
+	perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+} 
+.img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.project-container:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+.flip-card-front, .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.flip-card-front {
+  background-color: #4d4d4d;
+  color: black;
+}
+.content {
+  background-color: var(--primary-color);
+  transform: rotateX(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: justify;
+  gap:25px;
+  padding: 25px;
+  font-size:1.3rem;
+
+}
+.content > .btn {
+	background: #fff;
+	color: var(--primary-color);
+}
+
+.one { grid-area: one;}
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.browse-btn { 
+	grid-area: btn;
+	align-self: flex-start;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#contact {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+	font-size:1.5rem;
+}
+.btns {
+	display: flex;
+	gap:30px;
+}
+.contact-btns {
+	width: 200px;
+	height: 50px;
+	gap: 5px;
+	font-size:1.2rem;
+}
+footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+.footer, footer > #logo {
+	font-size: 20px;
+}
+@media (min-width: 768px) {
+  body {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    width: 1170px;
+  }
+}
+@media (max-width: 1200px) {
+  .project-container {
+  		min-height: 280px;
+  	}
+  	#projects {
+  		grid-template-rows: repeat(3, 280px);
+  	}
+}
+@media screen and (max-width: 768px) {
+  	.navlinks {
+  		display: none;
+  	}
+  	#home,
+  	#about {
+  		flex-direction: column-reverse;
+  		padding: 0;
+  		align-items: center;
+  		gap: 25px;
+  	}
+  	.vector,
+  	.intro-text,
+  	.about-me {
+  		width: 100%;
+  		align-items: center;
+  		text-align: center;
+  		font-size: 1.2rem;
+  	}
+  	.profile-container {
+  		width: 200px;
+  	}
+  	.social {
+  		position: static;
+  		margin-top: 25px;
+  		font-size: 1.3rem;
+  	}
+  	#about {
+  		flex-direction: column;
+  	}
+  	#projects {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 280px); ; 
+    gap: 40px; 
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight"
+    "nine"
+    "btn";
+
+  	}
+  	.project-container {
+  		min-height: auto;
+  	}
+  	.content {
+  		font-size: 1.1rem;
+
+  	}
+  	.mobile {
+  		width: 130px;
+  		height: 35px;
+  	}
+  	#contact {
+  		text-align: center;
+  		margin-top: 50px;
+  	}
+  	.btns {
+  		flex-direction: column;
+  	}
+  }
