@@ -129,5 +129,16 @@
 		    <a target="__blank" href='https://instagram.com/ig_shoa1b'><i class="footer fa-brands fa-instagram"></i></a>
 		</div>
 	</footer>
+	<script type="text/javascript">
+		const hambuger = document.querySelector('.fa-bars');
+const close = document.querySelector('.fa-xmark');
+const navbar = document.querySelector('.navlinks');
+hambuger.addEventListener('click', () => {
+	navbar.classList.add('active');
+});
+close.addEventListener('click', () => {
+	navbar.classList.remove('active');
+});
+	</script>
 </body>
 </html>
